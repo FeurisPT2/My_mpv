@@ -16,23 +16,82 @@ A beautiful, interactive, and bilingual (English/Vietnamese) CLI installer for t
 
 Ensure your system has curl, unzip, and gum installed.  
 **Install gum:**
+## Installation
 
-* **macOS:**
-```
-brew install gum
-```  
-* **Arch Linux:**
-```
- sudo pacman \-S gum
-   ```                 
-* **Ubuntu/Debian:**
+Use a package manager:
+
 ```bash
-sudo mkdir \-p /etc/apt/keyrings  
-curl \-fsSL \[https://repo.charm.sh/apt/gpg.key\](https://repo.charm.sh/apt/gpg.key) | sudo gpg \--dearmor \-o /etc/apt/keyrings/charm.gpg  
-echo "deb \[signed-by=/etc/apt/keyrings/charm.gpg\] \[https://repo.charm.sh/apt/\](https://repo.charm.sh/apt/) \* \*" | sudo tee /etc/apt/sources.list.d/charm.list  
+# macOS or Linux
+brew install gum
+
+# Arch Linux (btw)
+pacman -S gum
+
+# Fedora or EPEL 10
+dnf install gum
+
+# Nix
+nix-env -iA nixpkgs.gum
+
+# Flox
+flox install gum
+
+# Windows (via WinGet or Scoop)
+winget install charmbracelet.gum
+scoop install charm-gum
+```
+
+<details>
+<summary>Debian/Ubuntu</summary>
+
+```bash
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
 sudo apt update && sudo apt install gum
 ```
 
+</details>
+
+<details>
+<summary>Fedora/RHEL/OpenSuse</summary>
+
+```bash
+echo '[charm]
+name=Charm
+baseurl=https://repo.charm.sh/yum/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
+sudo rpm --import https://repo.charm.sh/yum/gpg.key
+
+# yum
+sudo yum install gum
+
+# zypper
+sudo zypper refresh
+sudo zypper install gum
+```
+
+</details>
+
+<details>
+<summary>FreeBSD</summary>
+
+```bash
+# packages
+sudo pkg install gum
+
+# ports
+cd /usr/ports/devel/gum && sudo make install clean
+```
+
+</details>
+Or just install it with `go`:
+
+```bash
+go install github.com/charmbracelet/gum@latest
+```
 ### **One-Line Install**
 Run the following command in your terminal to start the wizard directly:
 ```bash
