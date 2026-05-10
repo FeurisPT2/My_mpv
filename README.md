@@ -8,17 +8,15 @@ A beautiful, interactive, and bilingual (English/Vietnamese) CLI installer for t
 * 🎨 **Modern TUI**: Interactive menus using arrow keys and spacebar (Multi-select) powered by gum.  
 * 🛡️ **Automatic Cleanup**: Detects and removes conflicting UI scripts (uosc, ModernX, etc.) to ensure a bug-free experience.  
 * 📦 **Curated Collection**: Includes top-rated scripts from the awesome-mpv repository.  
-* ⚡ **Smart Installer**: Handles complex installations like uosc (zip extraction) and font embedding automatically.
+* ⚡ **Smart Installer**: Handles complex installations like uosc (zip extraction) and font embedding automatically.( kinda )
 
 ## **🚀 Installation & Usage**
 
 ### **Prerequisites**
 
 Ensure your system has curl, unzip, and gum installed.  
-**Install gum:**
-## Installation
 
-Use a package manager:
+**Use a package manager:**
 
 ```bash
 # macOS or Linux
@@ -87,12 +85,12 @@ cd /usr/ports/devel/gum && sudo make install clean
 ```
 
 </details>
-Or just install it with `go`:
+Or just install it with go :
 
 ```bash
 go install github.com/charmbracelet/gum@latest
 ```
-### **One-Line Install**
+### **Installation**
 Run the following command in your terminal to start the wizard directly:
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/FeurisPT2/My_mpv/main/Mpv_aio.sh)"
