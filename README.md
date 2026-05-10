@@ -36,7 +36,7 @@ sudo apt update && sudo apt install gum
 ### **One-Line Install**
 Run the following command in your terminal to start the wizard directly:
 ```bash
-curl \-sL \[https://raw.githubusercontent.com/FeurisPT2/My_mpv/main/Mpv_aio.sh\](https://raw.githubusercontent.com/azapt/mpv-osc-installer/main/Main\_script.sh) | bash
+curl -sL [https://raw.githubusercontent.com/FeurisPT2/My_mpv/main/Mpv_aio.sh](https://raw.githubusercontent.com/azapt/mpv-osc-installer/main/Main_script.sh) | bash
 ```
 ## **📦 What's Included?**
 
