@@ -95,7 +95,7 @@ go install github.com/charmbracelet/gum@latest
 ### **One-Line Install**
 Run the following command in your terminal to start the wizard directly:
 ```bash
-curl -sL https://raw.githubusercontent.com/FeurisPT2/My_mpv/main/Mpv_aio.sh | bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/FeurisPT2/My_mpv/main/Mpv_aio.sh)"
 ```
 ## **📦 What's Included?**
 
